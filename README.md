@@ -1,6 +1,6 @@
 Seoane, Hernan; Yurdagul, Emircan (2018), "Supporting Materials for "Trend Shocks and Sudden Stops""
 
-These files are available without any warranty
+
 
 This file contains the codes and the data used to produce the results in "Trend Shocks and Sudden Stops" (May, 2019) by Hernan Seoane and Emircan Yurdagul.
 First, we go over the files included for the model solution, and then through the data source and the figures in the paper.
