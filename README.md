@@ -1,26 +1,34 @@
-# SeoaneYurdagul2019
-Seoane, Hernan; Yurdagul, Emircan (2019), Supporting Materials for "Trend shocks and Sudden Stops" by Seoane and Yurdagul (2019)
+Seoane, Hernan; Yurdagul, Emircan (2018), "Supporting Materials for "Trend Shocks and Sudden Stops""
 
+These files are available without any warranty
 
-
-
-This file contains the codes and the data used to produce the results in "Trend Shocks and Sudden Stops" (August, 2018) by Hernan Seoane and Emircan Yurdagul.
+This file contains the codes and the data used to produce the results in "Trend Shocks and Sudden Stops" (May, 2019) by Hernan Seoane and Emircan Yurdagul.
 First, we go over the files included for the model solution, and then through the data source and the figures in the paper.
 
-README: SOLUTION
+READ ME: SOLUTION & SIMULATIONS
 
 The 'solution_policies' file is the code we run to solve the policy functions. 
-Load variable should be set to 0 to run without any guesses. Though the 'params' file should be copied in an 'outputs/' subfolder.
+The 'params_end' file contains some key parameters to be read in the codes. The last entry in this file is set to "0" for decentralized solution, and "1" for the planner's solution.
 The 'simulations' file reads the policy function and gives the simulated sample.
-To run the planner's problem, we just have to set the 'planner' variable to 1 in the 'solution_policies' file.
 The codes are initially written to allow for shocks to kappa and omega. The current version still includes these in a degenerate way.
-The random variables used for simulations are read from the files titled "randomXXX" included in this folder. They should also be copied in an 'outputs/' subfolder.
+In order to run with only trend shocks, set n_z=1,n_zt=1,n_zn=1 in the solution file, and n_z=1 in the simulation file (with replace all).
+In order to run with only transitory shocks, set n_g=1 in the solution and simulation files.
+The random variables used for simulations are read from the files titled "randomXXX" included in the outputs folder.
+'read_sim.do' file computes the statistics from the 'data_sim.txt' which gives the simulated model (Model columns in Table 3). 'read_sim_SP.do' produces the histogram of debt comparisons (Figure 6).
 
-README: DATA & MATLAB
+The folder 'Alternative' contains the additional files to compute the alternative (Bianchi 2011) model solution used in Figure 2. We use a modified version of our baseline codes for this alternative model. The solution file needs to be run together with the rest of the fortran files in the Alternative folder, which are originally supplied as supplementary files for Bianchi (2011), downloadable at https://www.aeaweb.org/articles?id=10.1257/aer.101.7.3400. (Some of these had to be modified to make compatible with our main code, so we include these here.)
+'Alternative/outputs' subfolder contains all the input needed for the solution of this model.
+
+
+
+READ ME: DATA & MATLAB
 A file with the smoothed estimates of unobservables is included.
 
 't_nt_crosscountry' includes data for figure 1, this data comes directly from the WDI and has multiple countries.
 
 File 'ss_data_arg.mat' includes the average path for observables and smoothed estimates around sudden stops. This data is based on the raw data from Ferreres (2010) as cited in the paper.
 
-Matlab files: 'figure_1', 'figures_2_3' plot the figures in the paper. For 'figures_2_3' you need to specify first the path to the simulations of the model with only transitory shocks and with trend and transitory shocks.
+Matlab files: 'figure_1', 'figures_2_3_5', 'figure_4' plot the figures in the paper.
+
+References:
+Bianchi, Javier. 2011. "Overborrowing and Systemic Externalities in the Business Cycle." American Economic Review, 101 (7): 3400-3426.
