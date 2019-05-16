@@ -26,6 +26,8 @@ A file with the smoothed estimates of unobservables is included.
 
 't_nt_crosscountry' includes data for figure 1, this data comes directly from the WDI and has multiple countries.
 
+'gyTgyN' includes the growth rates of tradable and nontradable per capita output for Argentina.
+
 File 'ss_data_arg.mat' includes the average path for observables and smoothed estimates around sudden stops. This data is based on the raw data from Ferreres (2010) as cited in the paper.
 
 Matlab files: 'figure_1', 'figures_2_3_5', 'figure_4' plot the figures in the paper.
